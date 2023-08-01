@@ -17,7 +17,11 @@ function CountryList({ cities, isLoading }) {
       <Message message="Add your first city by clicking on a city in the map" />
     );
 
-  const countries = cities.filter((city) => city.country);
+  const countries = cities.reduce((arr, city) => {
+    if (!arr.map((el) => el.country).includes(city.country))
+      return [...arr, { country: city.country, emoji: city.emoji }];
+    else return arr;
+  }, []);
 
   return (
     <div className={styles.countryList}>
