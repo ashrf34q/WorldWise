@@ -15,7 +15,6 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const flagemojiToPNG = (flag) => {
-  console.log(flag);
   const countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
     .map((char) => String.fromCharCode(char - 127397).toLowerCase())
     .join("");
