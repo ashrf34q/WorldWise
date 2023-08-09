@@ -3,6 +3,7 @@ import styles from "./City.module.css";
 import { useCities } from "../contexts/CitiesContext";
 import { useEffect } from "react";
 import Spinner from "./Spinner";
+import BackButton from "./BackButton";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -12,13 +13,21 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
-const flagemojiToPNG = (flag) => {
-  const countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
-    .map((char) => String.fromCharCode(char - 127397).toLowerCase())
-    .join("");
-  return (
-    <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
-  );
+// const flagemojiToPNG = (flag) => {
+//   const countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
+//     .map((char) => String.fromCharCode(char - 127397).toLowerCase())
+//     .join("");
+//   return (
+//     <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
+//   );
+// };
+
+const flagemojiToPNG = function (countryCode) {
+  const codePoints = countryCode
+    .toUpperCase()
+    .split("")
+    .map((char) => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
 };
 
 function City() {
@@ -43,7 +52,7 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{flagemojiToPNG(emoji)}</span> {cityName}
+          <span>{emoji}</span> {cityName}
         </h3>
       </div>
 
@@ -70,9 +79,9 @@ function City() {
         </a>
       </div>
 
-      {/* <div>
-        <ButtonBack />
-      </div> */}
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 }

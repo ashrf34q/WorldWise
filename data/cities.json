@@ -59,6 +59,66 @@
         "lng": 13.376933665713324
       },
       "id": 3637
+    },
+    {
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "notes": "Amazing as usual",
+      "date": "2023-08-09T01:18:59.780Z",
+      "position": {
+        "lat": "39.98471034679906",
+        "lng": "-0.03535505135654483"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Fonsorbes",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "notes": "jh",
+      "date": "2023-08-09T01:22:41.126Z",
+      "position": {
+        "lat": "43.53250836977985",
+        "lng": "1.228469055956447"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Chicago",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "notes": "Nice",
+      "date": "2023-08-09T02:06:27.304Z",
+      "position": {
+        "lat": "41.88240675426909",
+        "lng": "-87.58066305578129"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Bucharest",
+      "country": "Romania",
+      "emoji": "🇷🇴",
+      "notes": "Tate",
+      "date": "2023-08-09T02:08:45.850Z",
+      "position": {
+        "lat": "44.43533754409596",
+        "lng": "26.098789282857425"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Teruel",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "notes": "hgt",
+      "date": "2023-08-09T02:18:05.186Z",
+      "position": {
+        "lat": "40.34561711238832",
+        "lng": "-1.0818486499464244"
+      },
+      "id": 98443202
     }
   ]
 }
