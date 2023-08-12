@@ -19,6 +19,10 @@
   margin: 8rem auto;
 }
 
+.logo {
+  text-align: center;
+}
+
 .row {
   display: flex;
   flex-direction: column;
